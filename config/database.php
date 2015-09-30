@@ -45,11 +45,16 @@ return [
     */
 
     'connections' => [
-
+        
+        'sqlite_testing' => [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+            'prefix'   => ''          
+        ],  
         'sqlite' => [
             'driver'   => 'sqlite',
             'database' => storage_path('database.sqlite'),
-            'prefix'   => '',
+            'prefix'   => ''
         ],
 
         'mysql' => [
