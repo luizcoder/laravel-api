@@ -91,10 +91,8 @@ Vagrant.configure(2) do |config|
      " >> /etc/apache2/apache2.conf
      apache2ctl restart
      
-     chmod -R 777 /projeto/app/storage
      echo "create database api_db CHARACTER SET utf8 COLLATE utf8_general_ci;" | mysql -uroot
      curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin -- --filename=composer
-     
      cd /projeto
      composer install
      
