@@ -7,7 +7,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      *
      * @var string
      */
-    protected $baseUrl = 'http://api.dev';
+    protected $baseUrl = 'http://localhost';
 
    /**
      * Default preparation for each test
