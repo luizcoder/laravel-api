@@ -2,15 +2,35 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| Rotas da aplicação
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
+| Aqui estão registradas todas as rotas da aplicação.
 |
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['namespace' => 'Auth'], function()
+{
+    /**
+     * Rotas para autenticação
+     */
+    Route::post('auth/login', 'AuthController@autenticar');   
+    Route::get('auth/login', 'AuthController@getAutenticado');
+    Route::get('auth/logout', 'AuthController@logout');
+
+    
+    /**
+     * Rotas para cadastro e listagem de usuários
+     */
+    Route::get('auth/usuario', 'UsuarioController@listarUsuario');
+    Route::post('auth/usuario', 'UsuarioController@criarUsuario');
+    
+});
+
+
+
+
