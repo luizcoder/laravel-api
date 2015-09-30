@@ -81,6 +81,7 @@ Vagrant.configure(2) do |config|
      echo "
         <VirtualHost *:80>
             ServerName  api.dev
+            ServerAlias localhost
             DocumentRoot /projeto/public
             <Directory /projeto/public>
                    Options Indexes FollowSymLinks
