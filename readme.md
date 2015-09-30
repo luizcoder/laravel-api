@@ -1,3 +1,5 @@
+![Build Status](https://travis-ci.org/luizcoder/laravel-api.svg)
+
 ## LARAVEL API
 
 Laravel API é um web service base para construção de aplicativos web. Construido com sintaxe elegante e organizada de forma que possa ser extendido para atender aplicações com diferentes finalidades.
