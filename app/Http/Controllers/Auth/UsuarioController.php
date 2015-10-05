@@ -35,9 +35,10 @@ class UsuarioController extends Controller
     protected function criarUsuario(Request $request)
     {
         $data = $request->all();
+        $validate = $this->validator($data);
         
-        if($this->validator($data)->fails()){
-            return ['created' => false , 'msg' => 'Erro na validação'];
+        if($validate->fails()){
+            return ['created' => false , 'msg' => 'Erro na validação','errors'=>$validate->errors()->all()];
         }
         
         $usuario = User::create([
@@ -61,8 +62,5 @@ class UsuarioController extends Controller
     protected function listarUsuario()
     {
         return User::all();
-    }
-    
-
-   
+    }  
 }
