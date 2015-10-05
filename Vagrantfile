@@ -73,7 +73,7 @@ Vagrant.configure(2) do |config|
      sudo -i     
      export DEBIAN_FRONTEND=noninteractive
      apt-get update
-     apt-get install -y apache2 php5 mysql-server php5-sybase php5-mcrypt php5-curl nmap htop curl php5-mysql git
+     apt-get install -y apache2 php5 mysql-server php5-sybase php5-mcrypt php5-curl nmap htop curl php5-mysql git phpunit
      a2enmod rewrite
      php5enmod mcrypt
      php5enmod curl
